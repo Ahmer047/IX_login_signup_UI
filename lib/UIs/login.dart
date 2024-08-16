@@ -173,8 +173,8 @@ class _LoginState extends State<Login> {
                       ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color(0xff351A96), // Button background color
+                            backgroundColor: const Color(
+                                0xff351A96), // Button background color
                             minimumSize:
                                 const Size(260, 40), // Button width and height
                             shape: RoundedRectangleBorder(
@@ -186,19 +186,102 @@ class _LoginState extends State<Login> {
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           )),
+                      const SizedBox(height: 10),
+                      const Row(
+                        children: [
+                          Expanded(
+                            child: Divider(
+                              color: Colors.black,
+                              thickness: 1,
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Text(
+                              'Or With',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Divider(
+                              color: Colors.black,
+                              thickness: 1,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12,),
                       Row(
                         children: [
                           Container(
-                            
-
+                            width: 170,
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                              color: Colors.grey,
+                              width: 1,
+                            )),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 35,
+                                  width: 35,
+                                  child: Image(
+                                    image:
+                                        AssetImage('assets/images/github.png'),
+                                  ),
+                                ),
+                                Text(
+                                  'GitHub',
+                                  style: TextStyle(fontSize: 16),
+                                )
+                              ],
+                            ),
                           ),
+                          const SizedBox(width: 11),
                           Container(
-
-                          )
+                            width: 170,
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                              color: Colors.grey,
+                              width: 1,
+                            )),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 35,
+                                  width: 35,
+                                  child: Image(
+                                    image:
+                                        AssetImage('assets/images/gitlab.png'),
+                                  ),
+                                ),
+                                SizedBox(width: 5,),
+                                Text(
+                                  'Gitlab',
+                                  style: TextStyle(fontSize: 16),
+                                )
+                              ],
+                            ),
+                          ),
                         ],
                       )
                     ],
-                  )
+                  ),
+                  const SizedBox(height: 20,),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Do not have an account ?', style: TextStyle(color: Colors.grey, fontSize: 16, ), ),
+                      SizedBox(width: 6,),
+                      Text('Sign Up', style: TextStyle(color: Color(0xff351A96), fontWeight: FontWeight.bold, fontSize: 16,),)
+                    ],
+                  ),
                 ],
               ),
             ),
